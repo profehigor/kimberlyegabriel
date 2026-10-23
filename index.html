@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Kimberly & Gabriel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== ÍCONES (sprite SVG) + MOLDURA ONDULADA DO HERO ========== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Moldura "convite" com topo e base ondulados -->
+      <clipPath id="scallop" clipPathUnits="objectBoundingBox">
+        <path d="M0.06,0.04 C0.16,0.04 0.20,0.075 0.30,0.075 C0.40,0.075 0.42,0.02 0.50,0.02 C0.58,0.02 0.60,0.075 0.70,0.075 C0.80,0.075 0.84,0.04 0.94,0.04 Q1,0.04 1,0.10 L1,0.90 Q1,0.96 0.94,0.96 C0.84,0.96 0.80,0.925 0.70,0.925 C0.60,0.925 0.58,0.98 0.50,0.98 C0.42,0.98 0.40,0.925 0.30,0.925 C0.20,0.925 0.16,0.96 0.06,0.96 Q0,0.96 0,0.90 L0,0.10 Q0,0.04 0.06,0.04 Z"/>
+      </clipPath>
+
+      <symbol id="i-rings" viewBox="0 0 48 48">
+        <circle cx="19" cy="29" r="10"/><circle cx="30" cy="29" r="10"/>
+        <path d="M30 10 l-3 -4 h6 z"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 48 48">
+        <path d="M24 43 C24 43 11 30 11 20 a13 13 0 0 1 26 0 C37 30 24 43 24 43 z"/>
+        <circle cx="24" cy="20" r="4.5"/>
+      </symbol>
+      <symbol id="i-leaf" viewBox="0 0 48 48">
+        <path d="M13 40 C21 31 29 22 36 9"/>
+        <path d="M21 32 C14 31 11 26 12 21 C18 21 22 25 21 32 z"/>
+        <path d="M27 24 C21 22 20 16 22 12 C28 13 30 18 27 24 z"/>
+        <path d="M31 20 C36 21 39 25 38 30 C33 30 30 26 31 20 z"/>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 48 48">
+        <path d="M24 41 C9 30 7 20 14 15 C18 12 22 14 24 18 C26 14 30 12 34 15 C41 20 39 30 24 41 z"/>
+      </symbol>
+      <symbol id="i-toast" viewBox="0 0 48 48">
+        <path d="M11 8 h11 l-1.5 14 a4 4 0 0 1 -8 0 z"/>
+        <path d="M16.5 26 v13 M11 40 h11"/>
+        <path d="M27 8 h11 l-1.5 14 a4 4 0 0 1 -8 0 z"/>
+        <path d="M32.5 26 v13 M27 40 h11"/>
+      </symbol>
+      <symbol id="i-camera" viewBox="0 0 48 48">
+        <rect x="7" y="15" width="34" height="23" rx="3"/>
+        <circle cx="24" cy="26.5" r="6.5"/>
+        <path d="M17 15 l2.5 -5 h9 l2.5 5"/>
+      </symbol>
+      <symbol id="i-cloche" viewBox="0 0 48 48">
+        <path d="M8 33 a16 16 0 0 1 32 0 z"/>
+        <circle cx="24" cy="14" r="2.2"/>
+        <path d="M5 37 h38"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ========== LOADER (convite se abrindo) ========== -->
+  <div class="loader">
+    <div class="loader__content">
+      <div class="loader__monogram">K <span class="loader__amp">&amp;</span> G</div>
+      <div class="loader__line"></div>
+      <p class="loader__caption">Um convite para celebrar</p>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <header class="hero" id="hero">
+    <nav class="nav">
+      <a href="#hero" class="nav__mono">K &amp; G</a>
+      <div class="nav__links">
+        <a href="#hero">Início</a>
+        <a href="#historia">Nossa História</a>
+        <a href="#local">Detalhes</a>
+        <a href="#presenca">Presença</a>
+      </div>
+      <p class="nav__tag">Muito nos amou o Senhor</p>
+    </nav>
+
+    <div class="hero__wrap">
+      <div class="hero__shadow">
+        <div class="hero__frame">
+          <div class="hero__photo slot slot--photo">
+            <img src="images/hero.png" alt="Kimberly e Gabriel" data-slot="images/hero.png">
+          </div>
+          <div class="grain-overlay"></div>
+
+          <!-- <p class="hero__stack hero-reveal">Belas pessoas<br>Belos lugares<br>Juntos,<br>mais felizes</p>
+          <p class="hero__note hero-reveal">Corações unidos,<br>dias mais<br>felizes</p> -->
+
+          <div class="hero__content">
+            <p class="hero__eyebrow hero-reveal">Com muita alegria,<br>convidamos você para o casamento de</p>
+            <h1 class="hero__names hero-reveal">
+              <span>Kimberly</span>
+              <span class="hero__amp">&amp;</span>
+              <span>Gabriel</span>
+            </h1>
+            <p class="hero__date hero-reveal" data-w="long">19 de setembro de 2026</p>
+            <p class="hero__place hero-reveal">Chácara Krzak · Curitiba, PR</p>
+            <a href="#presenca" class="btn hero-reveal">Você está convidado <span aria-hidden="true">›</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGENS: orquídeas em PNG com fundo transparente (sobrepõem a moldura) -->
+      <div class="orchid orchid--l slot slot--bare">
+        <img src="images/orquidea-esquerda.png" alt="" data-slot="images/orquidea-esquerda.png">
+      </div>
+      <div class="orchid orchid--r slot slot--bare">
+        <img src="images/orquidea-direita.png" alt="" data-slot="images/orquidea-direita.png">
+      </div>
+    </div>
+
+    <!-- Faixa de informações -->
+    <div class="strip">
+      <div class="strip__item reveal">
+        <svg class="icon"><use href="#i-rings"/></svg>
+        <p class="strip__label">A Data</p>
+        <p class="strip__text" data-w="long">25 de dezembro de 2026</p>
+      </div>
+      <div class="strip__item reveal">
+        <svg class="icon"><use href="#i-pin"/></svg>
+        <p class="strip__label">O Local</p>
+        <p class="strip__text">Curitiba · Paraná</p>
+      </div>
+      <div class="strip__item reveal">
+        <svg class="icon"><use href="#i-leaf"/></svg>
+        <p class="strip__label">Convidados</p>
+        <p class="strip__text">Família &amp; Amigos</p>
+      </div>
+      <div class="strip__item reveal">
+        <svg class="icon"><use href="#i-heart"/></svg>
+        <p class="strip__label">Um Amanhã</p>
+        <p class="strip__text">Mais feliz</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== NOSSA HISTÓRIA ========== -->
+  <section class="section story" id="historia">
+    <div class="container story__inner">
+      <div class="story__photo slot slot--photo reveal">
+        <img src="images/historia.png" alt="Mãos de Kimberly e Gabriel" data-slot="images/historia.png">
+      </div>
+      <div class="story__text reveal">
+        <p class="label">Nossa História</p>
+        <h2 class="h-title">Uma história<br><em>que vale celebrar</em></h2>
+        <div class="divider"></div>
+        <p class="body-text">
+          Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? Vão colocar história? 
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== IMAGENS LADO A LADO ========== -->
+  <div class="container">
+    <div class="split-images">
+      <div class="split-images__left slot slot--photo">
+        <img src="images/left-image.png" alt="Imagem da esquerda" data-slot="images/left-image.png">
+      </div>
+      <div class="split-images__right slot slot--photo">
+        <img src="images/right-image.png" alt="Imagem da direita" data-slot="images/right-image.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CONTAGEM REGRESSIVA ========== -->
+  <div class="container countdown-wrap" id="contagem">
+    <div class="countdown-card reveal">
+      <p class="label">Faltam</p>
+      <div id="clock" class="countdown-wrapper">
+        <div class="countdown-item">
+          <span class="countdown-number" id="days">00</span>
+          <span class="countdown-label">Dias</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="hours">00</span>
+          <span class="countdown-label">Horas</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="minutes">00</span>
+          <span class="countdown-label">Minutos</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="seconds">00</span>
+          <span class="countdown-label">Segundos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== O DIA (cronograma) ========== -->
+  <section class="section day" id="cronograma">
+    <div class="container">
+      <div class="rule-title reveal">
+        <h2>O Dia</h2>
+      </div>
+      <p class="day__sub reveal">Uma celebração cheia de amor</p>
+
+      <div class="day__grid">
+        <div class="day__item">
+          <svg class="icon"><use href="#i-toast"/></svg>
+          <p class="day__time">16h00</p>
+          <p class="day__event">Recepção dos Convidados</p>
+        </div>
+        <div class="day__item">
+          <svg class="icon"><use href="#i-rings"/></svg>
+          <p class="day__time">16h30</p>
+          <p class="day__event">Cerimônia</p>
+        </div>
+        <div class="day__item">
+          <svg class="icon"><use href="#i-camera"/></svg>
+          <p class="day__time">18h00</p>
+          <p class="day__event">Sessão de Fotos</p>
+        </div>
+        <div class="day__item">
+          <svg class="icon"><use href="#i-cloche"/></svg>
+          <p class="day__time">19h00</p>
+          <p class="day__event">Jantar &amp; Celebração</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== O LOCAL ========== -->
+  <section class="section section--tight local" id="local">
+    <div class="container">
+      <div class="rule-title reveal">
+        <h2>O Local</h2>
+      </div>
+      <p class="day__sub reveal">Onde tudo vai acontecer</p>
+
+      <div class="venue-gallery">
+        <a href="https://www.instagram.com/c.krzak" target="_blank" class="venue-card reveal">
+          <div class="venue-card__img slot slot--photo">
+            <img src="images/local1.png" alt="Local da Cerimônia" class="venue-img" data-slot="images/local1.png">
+          </div>
+          <h3 class="venue-title">Cerimônia</h3>
+          <p class="venue-text">Chácara Krzak Eventos<br>R. José Júlio Tortato, 271 - Campo de Santana, Curitiba - PR</p>
+        </a>
+
+        <a href="https://www.instagram.com/c.krzak" target="_blank" class="venue-card reveal">
+          <div class="venue-card__img slot slot--photo">
+            <img src="images/local3.png" alt="Local da Recepção" class="venue-img" data-slot="images/local3.png">
+          </div>
+          <h3 class="venue-title">Recepção</h3>
+          <p class="venue-text">A festa será no mesmo local da cerimônia.<br>Haverá jantar e muita celebração para todos nós!</p>
+        </a>
+      </div>
+
+      <div class="map-container reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1247.8509003092354!2d-49.31577216772031!3d-25.602576823008683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcfef2eb77cd9f%3A0x3a94466017aceb6e!2sCh%C3%A1cara%20Krzak!5e0!3m2!1sen!2sbr!4v1792625538995!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DRESS CODE ========== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="card card--sage dress reveal">
+        <div class="dress__text">
+          <p class="label">Dress Code</p>
+          <div class="divider divider--left"></div>
+          <h3 class="card__title">Social Completo</h3>
+          <p class="card__text">Passeio completo, com elegância e conforto.</p>
+          <p class="card__text card__text--small">As madrinhas estarão de verde esmeralda — pedimos às convidadas que evitem essa cor.</p>
+        </div>
+        <div class="dress__art">
+          <!-- IMAGENS: ilustrações em PNG transparente (terno e vestido) -->
+          <div class="dress__piece slot slot--bare">
+            <img src="images/dresscode-terno.png" alt="Sugestão de traje masculino" data-slot="images/dresscode-terno.png">
+          </div>
+          <div class="dress__piece slot slot--bare">
+            <img src="images/dresscode-vestido.png" alt="Sugestão de traje feminino" data-slot="images/dresscode-vestido.png">
+          </div>
+        </div>
+        <div class="dress__orchid slot slot--bare">
+          <img src="images/orquidea-rodape.png" alt="" data-slot="images/orquidea-rodape.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRESENÇA E PRESENTES ========== -->
+  <section class="section section--tight gifts" id="presenca">
+    <div class="container gifts__stack">
+      <div class="card card--cream rsvp reveal">
+        <div class="rsvp__text">
+          <p class="label">Confirmação de Presença</p>
+          <div class="divider divider--left"></div>
+          <h3 class="card__title">Sua presença é<br>o melhor presente</h3>
+          <p class="card__text">
+            Por favor, confirme sua participação até <strong data-w="rsvp">1º de setembro de 2026</strong>, para que possamos preparar tudo com muito cuidado e esmero para recebê-los.
+          </p>
+          <a href="presenca/index.html" class="btn">Confirmar Presença <span aria-hidden="true">›</span></a>
+        </div>
+        <div class="rsvp__photo slot slot--photo">
+          <img src="images/rsvp.png" alt="" data-slot="images/rsvp.png">
+        </div>
+      </div>
+
+      <div class="card card--blush rsvp rsvp--reverse reveal" id="presentes">
+        <div class="rsvp__text">
+          <p class="label">Lista de Presentes</p>
+          <div class="divider divider--left"></div>
+          <h3 class="card__title">Um gesto<br>de carinho</h3>
+          <p class="card__text">
+            Com delicadeza, organizamos uma lista de sugestões para quem desejar nos acompanhar também nesse gesto. Sua presença já é mais do que suficiente.
+          </p>
+          <a href="presentes/index.html" class="btn">Ver Lista de Presentes <span aria-hidden="true">›</span></a>
+        </div>
+        <div class="rsvp__photo slot slot--photo">
+          <img src="images/presentes.png" alt="" data-slot="images/presentes.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOTO LARGA ========== -->
+  <div class="container">
+    <div class="full-photo slot slot--photo reveal">
+      <img src="images/faq.png" alt="Foto full-width" class="full-photo__image" data-slot="images/faq.png">
+    </div>
+  </div>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section faq" id="faq">
+    <div class="container faq__inner">
+      <div class="faq__label">
+        <p class="label">Dúvidas</p>
+        <h2 class="h-title faq__title">Perguntas<br><em>Frequentes</em></h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq-item">
+          <div class="faq-item__header">
+            <span class="faq-item__num">01</span>
+            <h3 class="faq-item__question">Que horas devo chegar?</h3>
+          </div>
+          <p class="faq-item__answer">Recomendamos chegar com 30 minutos de antecedência para que você possa se acomodar antes do início da cerimônia.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__header">
+            <span class="faq-item__num">02</span>
+            <h3 class="faq-item__question">Posso levar crianças?</h3>
+          </div>
+          <p class="faq-item__answer">As crianças são bem-vindas! Pedimos que os pais fiquem atentos durante a cerimônia para garantir um momento especial para todos.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__header">
+            <span class="faq-item__num">03</span>
+            <h3 class="faq-item__question">Haverá estacionamento?</h3>
+          </div>
+          <p class="faq-item__answer">Sim, o local possui estacionamento amplo e gratuito no local.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__header">
+            <span class="faq-item__num">04</span>
+            <h3 class="faq-item__question">Como entro em contato com os noivos?</h3>
+          </div>
+          <p class="faq-item__answer">Você pode utilizar os botões de contato no final desta página para falar conosco ou com o nosso cerimonial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="footer" id="contato">
+    <!-- IMAGEM: a mesma orquídea, espelhada no lado direito via CSS -->
+    <div class="footer__orchid footer__orchid--l slot slot--bare">
+      <img src="images/orquidea-rodape.png" alt="" data-slot="images/orquidea-rodape.png">
+    </div>
+    <div class="footer__orchid footer__orchid--r slot slot--bare">
+      <img src="images/orquidea-rodape.png" alt="" data-slot="images/orquidea-rodape.png">
+    </div>
+
+    <div class="footer__inner">
+      <p class="footer__tagline">Celebrar o amor<br>juntos</p>
+      <div class="divider"></div>
+
+      <div class="footer__couple">
+        <p class="footer__names">Kimberly &amp; Gabriel</p>
+        <p class="footer__date" data-w="dots">19 · 09 · 2026</p>
+      </div>
+
+      <div class="footer-contacts">
+        <a href="https://wa.me/5541988649449" target="_blank" class="btn btn--outline">Falar com a Noiva</a>
+        <a href="https://wa.me/5511958495478" target="_blank" class="btn btn--outline">Falar com o Noivo</a>
+        <a href="https://wa.me/554198862-0881" target="_blank" class="btn btn--outline">Falar com o Cerimonial</a>
+        <a href="presenca/index.html" class="btn btn--outline">Confirmar Presença</a>
+      </div>
+
+      <div class="footer__brand">
+        <p class="footer__brand-label">Site criado por</p>
+        <span class="footer__logo-text">Entrelinhas</span>
+      </div>
+
+      <p class="footer__copy">© 2026 Kimberly &amp; Gabriel · Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
